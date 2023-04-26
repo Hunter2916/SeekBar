@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_80"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/cross"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="16dp"
+            android:background="@mipmap/icon_close"/>
+
+        <TextView
+            android:id="@+id/pleaser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请向右滑动滑块验证"
+            android:layout_below="@id/cross"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp" />
+        <SeekBar
+            android:id="@+id/sbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:max="100"
+            android:paddingHorizontal="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:splitTrack="false"
+            android:thumb="@mipmap/slidejiantou"
+            android:layout_below="@id/pleaser"
+            android:progressDrawable="@drawable/seek_bar_rectangle_background"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="38dp"
+            android:thumbOffset="0dp" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_below="@id/pleaser"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:paddingTop="4dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/slidejiantou"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:src="@mipmap/slidejiantou"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="70dp"
+            android:layout_below="@id/pleaser"
+            android:layout_marginTop="30dp"/>
+    </RelativeLayout>
+</LinearLayout>
